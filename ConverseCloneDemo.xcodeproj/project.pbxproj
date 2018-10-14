@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7A032DEBF8472909B28889B /* Pods_ConverseCloneDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */; };
 		D9D7F109216DE24F00518019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F108216DE24F00518019 /* AppDelegate.swift */; };
 		D9D7F10B216DE24F00518019 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F10A216DE24F00518019 /* ViewController.swift */; };
 		D9D7F10E216DE24F00518019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F10C216DE24F00518019 /* Main.storyboard */; };
 		D9D7F110216DE25100518019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F10F216DE25100518019 /* Assets.xcassets */; };
 		D9D7F113216DE25100518019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F111216DE25100518019 /* LaunchScreen.storyboard */; };
+		D9D7F11E21731D3700518019 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F11D21731D3700518019 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConverseCloneDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D7F105216DE24F00518019 /* ConverseCloneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverseCloneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D7F108216DE24F00518019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D7F10A216DE24F00518019 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		D9D7F10F216DE25100518019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D7F112216DE25100518019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D7F114216DE25100518019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D7F11D21731D3700518019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9B20B57F5B98F877BFD8B14 /* Pods-ConverseCloneDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F2303EAA37611EF7A563FC64 /* Pods-ConverseCloneDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A032DEBF8472909B28889B /* Pods_ConverseCloneDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5ACD72C6BCA4A303C30348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8BD4248371CB6BC2A23EBFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2303EAA37611EF7A563FC64 /* Pods-ConverseCloneDemo.debug.xcconfig */,
+				E9B20B57F5B98F877BFD8B14 /* Pods-ConverseCloneDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D9D7F0FC216DE24F00518019 = {
 			isa = PBXGroup;
 			children = (
 				D9D7F107216DE24F00518019 /* ConverseCloneDemo */,
 				D9D7F106216DE24F00518019 /* Products */,
+				A8BD4248371CB6BC2A23EBFF /* Pods */,
+				7E5ACD72C6BCA4A303C30348 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				D9D7F10F216DE25100518019 /* Assets.xcassets */,
 				D9D7F111216DE25100518019 /* LaunchScreen.storyboard */,
 				D9D7F114216DE25100518019 /* Info.plist */,
+				D9D7F11D21731D3700518019 /* GoogleService-Info.plist */,
 			);
 			path = ConverseCloneDemo;
 			sourceTree = "<group>";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D7F117216DE25100518019 /* Build configuration list for PBXNativeTarget "ConverseCloneDemo" */;
 			buildPhases = (
+				402DA2B303682086B26F5D41 /* [CP] Check Pods Manifest.lock */,
 				D9D7F101216DE24F00518019 /* Sources */,
 				D9D7F102216DE24F00518019 /* Frameworks */,
 				D9D7F103216DE24F00518019 /* Resources */,
+				E5E5A96534261A969C741E31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D7F11E21731D3700518019 /* GoogleService-Info.plist in Resources */,
 				D9D7F113216DE25100518019 /* LaunchScreen.storyboard in Resources */,
 				D9D7F110216DE25100518019 /* Assets.xcassets in Resources */,
 				D9D7F10E216DE24F00518019 /* Main.storyboard in Resources */,
@@ -129,6 +159,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		402DA2B303682086B26F5D41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConverseCloneDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E5A96534261A969C741E31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9D7F101216DE24F00518019 /* Sources */ = {
@@ -280,16 +353,18 @@
 		};
 		D9D7F118216DE25100518019 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2303EAA37611EF7A563FC64 /* Pods-ConverseCloneDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U9W86J2XH;
 				INFOPLIST_FILE = ConverseCloneDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fkymy.ConverseCloneDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = fkymy.converse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -298,16 +373,18 @@
 		};
 		D9D7F119216DE25100518019 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B20B57F5B98F877BFD8B14 /* Pods-ConverseCloneDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U9W86J2XH;
 				INFOPLIST_FILE = ConverseCloneDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fkymy.ConverseCloneDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = fkymy.converse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
