@@ -35,14 +35,19 @@ class ViewController: UIViewController {
   var index = 3
   
   @IBAction func onPlay(_ sender: Any) {
-    
-    let storage = Storage.storage()
-    let channelRef = storage.reference().child("channels").child(channelId)
 
-    let localURL = audioURL(for: messageFilenames[0])
-    let playerItem = AVPlayerItem(url: localURL)
-    self.player = AVPlayer(playerItem: playerItem)
-    self.player.play()
+//    let localURL = audioURL(for: messageFilenames[0])
+    
+//    let playerItem = AVPlayerItem(url: localURL)
+//    self.player = AVPlayer(playerItem: playerItem)
+    
+    var items: [AVPlayerItem] = []
+    
+    for filename in messageFilenames {
+      let localURL = audioURL(for: filename)
+      let playerItem = AVPlayerItem(url: localURL)
+      items.append(playerItem)
+    }
 
 //    channelRef.child(messageFilenames[0]).downloadURL { (url, error) in
 //      if error != nil {
@@ -65,7 +70,6 @@ class ViewController: UIViewController {
   }
   
   @IBAction func onPrevious(_ sender: Any) {
-    
     // if last, play that index
     // if not play the previous index
     // if index is 0, play 0
@@ -137,7 +141,7 @@ class ViewController: UIViewController {
       }
     }
     
-    player.play()
+    // player.play()
   }
   
   func audioURL(for filename: String) -> URL {
@@ -148,4 +152,3 @@ class ViewController: UIViewController {
     return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
   }
 }
-

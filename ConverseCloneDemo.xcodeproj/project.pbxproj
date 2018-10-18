@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7A032DEBF8472909B28889B /* Pods_ConverseCloneDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */; };
+		D918EBA721788404005FA98F /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBA621788404005FA98F /* AudioRecorder.swift */; };
 		D9D7F109216DE24F00518019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F108216DE24F00518019 /* AppDelegate.swift */; };
 		D9D7F10B216DE24F00518019 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F10A216DE24F00518019 /* ViewController.swift */; };
 		D9D7F10E216DE24F00518019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F10C216DE24F00518019 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConverseCloneDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D918EBA621788404005FA98F /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		D9D7F105216DE24F00518019 /* ConverseCloneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverseCloneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D7F108216DE24F00518019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D7F10A216DE24F00518019 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				D9D7F108216DE24F00518019 /* AppDelegate.swift */,
 				D9D7F10A216DE24F00518019 /* ViewController.swift */,
+				D918EBA621788404005FA98F /* AudioRecorder.swift */,
 				D9D7F10C216DE24F00518019 /* Main.storyboard */,
 				D9D7F10F216DE25100518019 /* Assets.xcassets */,
 				D9D7F111216DE25100518019 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			files = (
 				D9D7F10B216DE24F00518019 /* ViewController.swift in Sources */,
 				D9D7F109216DE24F00518019 /* AppDelegate.swift in Sources */,
+				D918EBA721788404005FA98F /* AudioRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
