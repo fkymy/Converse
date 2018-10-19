@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7c-dT-Cdj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,23 +32,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvP-R0-RNw">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
                                                 <state key="normal" title="Previous"/>
-                                                <connections>
-                                                    <action selector="onPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2J-tZ-yZU"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-rl-fgr">
                                                 <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="Play"/>
-                                                <connections>
-                                                    <action selector="onPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEm-Ll-Yhn"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOR-nT-UjS">
                                                 <rect key="frame" x="211" y="0.0" width="32" height="30"/>
                                                 <state key="normal" title="Next"/>
-                                                <connections>
-                                                    <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBl-he-m7E"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -62,12 +53,98 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="PFa-TV-srl" id="NUH-iz-llb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="108" y="116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9kO-FO-ZhS">
+            <objects>
+                <viewController id="c7c-dT-Cdj" customClass="ViewController" customModule="ConverseCloneDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9i-Ub-5Jq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-Ga-SGt" customClass="Container" customModule="ConverseCloneDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-7l-26n">
+                                        <rect key="frame" x="97.5" y="316" width="180" height="35"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-LC-i7z">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="2"/>
+                                                <color key="tintColor" red="1" green="0.25007479399999999" blue="0.084036610580000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-Zw-8jE">
+                                                <rect key="frame" x="0.0" y="33" width="180" height="2"/>
+                                                <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="v9V-RR-FWw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップ&amp;長押しで話す" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-6m-7QY" customClass="Label" customModule="ConverseCloneDemo" customModuleProvider="target">
+                                        <rect key="frame" x="81" y="180" width="213" height="22"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rQJ-6m-7QY" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="0wT-oP-6vR"/>
+                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="2s2-eN-p3X"/>
+                                    <constraint firstItem="rQJ-6m-7QY" firstAttribute="top" secondItem="gKq-Ga-SGt" secondAttribute="top" constant="180" id="3BR-fn-wse"/>
+                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerY" secondItem="gKq-Ga-SGt" secondAttribute="centerY" id="pHE-vV-OW9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1m-fB-oTh" customClass="PrimaryControl" customModule="ConverseCloneDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5he-4Z-wde">
+                                        <rect key="frame" x="172.5" y="48" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="onPlay:" destination="c7c-dT-Cdj" eventType="touchUpInside" id="O0g-cz-Ect"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5he-4Z-wde" firstAttribute="centerX" secondItem="i1m-fB-oTh" secondAttribute="centerX" id="LlV-ho-BQz"/>
+                                    <constraint firstItem="5he-4Z-wde" firstAttribute="top" secondItem="i1m-fB-oTh" secondAttribute="top" constant="48" id="qR4-rT-xix"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onTouchDown:" destination="c7c-dT-Cdj" eventType="touchDown" id="fj7-rj-Mbd"/>
+                                    <action selector="onTouchUpInside:" destination="c7c-dT-Cdj" eventType="touchUpInside" id="39j-ez-c9f"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VUr-th-66d" firstAttribute="trailing" secondItem="gKq-Ga-SGt" secondAttribute="trailing" id="EzD-9v-ICS"/>
+                            <constraint firstAttribute="bottom" secondItem="i1m-fB-oTh" secondAttribute="bottom" id="Muu-tA-qG9"/>
+                            <constraint firstItem="i1m-fB-oTh" firstAttribute="top" secondItem="G9i-Ub-5Jq" secondAttribute="top" id="RFg-3T-1fg"/>
+                            <constraint firstItem="gKq-Ga-SGt" firstAttribute="leading" secondItem="VUr-th-66d" secondAttribute="leading" id="Uru-sr-e4B"/>
+                            <constraint firstItem="VUr-th-66d" firstAttribute="trailing" secondItem="i1m-fB-oTh" secondAttribute="trailing" id="a9t-d1-qYJ"/>
+                            <constraint firstItem="gKq-Ga-SGt" firstAttribute="top" secondItem="G9i-Ub-5Jq" secondAttribute="top" id="h4j-xz-T5f"/>
+                            <constraint firstItem="i1m-fB-oTh" firstAttribute="leading" secondItem="VUr-th-66d" secondAttribute="leading" id="n4E-hG-oZj"/>
+                            <constraint firstAttribute="bottom" secondItem="gKq-Ga-SGt" secondAttribute="bottom" id="x12-Ga-h6w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VUr-th-66d"/>
+                    </view>
+                    <connections>
+                        <outlet property="average" destination="FkT-LC-i7z" id="VNI-Bj-gan"/>
+                        <outlet property="container" destination="gKq-Ga-SGt" id="Naq-w6-9lh"/>
+                        <outlet property="label" destination="rQJ-6m-7QY" id="52d-tz-4ep"/>
+                        <outlet property="peak" destination="pfa-Zw-8jE" id="JXz-XR-z9w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0q-aV-giI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

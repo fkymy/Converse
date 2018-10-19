@@ -6,7 +6,5 @@ target 'ConverseCloneDemo' do
   use_frameworks!
 
   # Pods for ConverseCloneDemo
-  pod 'Firebase/Core'
-  pod 'Firebase/Storage'
 
 end

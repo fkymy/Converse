@@ -10,24 +10,33 @@ import AVFoundation
 
 protocol AudioRecorderDelegate: class {
   
+  func audioRecorder(_ audioRecorder: AudioRecorder, didStartRecording url: URL)
+  
+  func audioRecorder(_ audioRecorder: AudioRecorder, didStepMetering at: CFTimeInterval, averagePower: Float, peakPower: Float)
+  
+  func audioRecorder(_ audioRecorder: AudioRecorder, didFinishRecording url: URL)
 }
 
 class AudioRecorder: NSObject {
   
   private(set) var recorder: AVAudioRecorder!
   
-  private let audioSession = AVAudioSession.sharedInstance()
+  private let session = AVAudioSession.sharedInstance()
   
   weak var delegate: AudioRecorderDelegate?
   
+  private var displaylink: CADisplayLink?
+  
   var isRecording: Bool {
-    get { return recorder.isRecording }
+    get {
+      if let recorder = recorder {
+        return recorder.isRecording
+      }
+      return false
+    }
   }
   
-  var isMeteringEnabled: Bool {
-    get { return recorder.isMeteringEnabled }
-    set { recorder.isMeteringEnabled = newValue }
-  }
+  var pausedForInterruption = false
   
   override init() {
     super.init()
@@ -43,6 +52,7 @@ class AudioRecorder: NSObject {
   }
   
   deinit {
+    stopMetering()
     let nc = NotificationCenter.default
     nc.removeObserver(self,
                       name: AVAudioSession.interruptionNotification,
@@ -56,7 +66,11 @@ class AudioRecorder: NSObject {
 // MARK: - Controls
 extension AudioRecorder {
   
-  func startRecording() throws {
+  func startRecording() {
+    guard !isRecording else {
+      return
+    }
+    
     let url = audioURL(for: temporaryAudioFilename)
     let settings: [String: Any] = [
       AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -66,19 +80,39 @@ extension AudioRecorder {
       AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
     ]
     
-    recorder = try AVAudioRecorder(url: url, settings: settings)
+    do {
+      try setAudioSession(active: true)
+      recorder = try AVAudioRecorder(url: url, settings: settings)
+    }
+    catch let error {
+      print(error)
+      return
+    }
+    
     recorder.delegate = self
     recorder.isMeteringEnabled = true
-    recorder.updateMeters()
     recorder.record()
     
-    let displaylink = CADisplayLink(target: self, selector: #selector(step))
-    displaylink.preferredFramesPerSecond = 10
-    displaylink.add(to: .current, forMode: RunLoop.Mode.common)
+    delegate?.audioRecorder(self, didStartRecording: url)
+    startMetering()
   }
   
   func stopRecoding() {
     recorder.stop()
+    stopMetering()
+    delegate?.audioRecorder(self, didFinishRecording: audioURL(for: temporaryAudioFilename))
+  }
+  
+  func pauseRecording() {
+    pausedForInterruption = true
+    recorder.pause()
+  }
+  
+  func resumeRecording() {
+    if pausedForInterruption {
+      recorder.record()
+    }
+    pausedForInterruption = false
   }
   
   func deleteRecording() {
@@ -86,11 +120,27 @@ extension AudioRecorder {
   }
 }
 
+// MARK: - Metering
 extension AudioRecorder {
   
+  func startMetering() {
+    displaylink = CADisplayLink(target: self, selector: #selector(step))
+    displaylink?.add(to: .current, forMode: RunLoop.Mode.common)
+  }
+  
+  func stopMetering() {
+    displaylink?.invalidate()
+    displaylink = nil
+  }
+  
   @objc func step(displaylink: CADisplayLink) {
-    // do something
-    
+    guard let recorder = recorder else { return }
+    recorder.updateMeters()
+    let timestamp = displaylink.timestamp
+    let correction: Float = 0
+    let average = recorder.averagePower(forChannel: 0) + correction
+    let peak = recorder.peakPower(forChannel: 0) + correction
+    delegate?.audioRecorder(self, didStepMetering: timestamp, averagePower: average, peakPower: peak)
   }
 }
 
@@ -130,19 +180,24 @@ extension AudioRecorder {
   }
 }
 
-// MARK: Session Event Handlers
+// MARK: - AVAudioSession
 extension AudioRecorder {
+  
+  func setAudioSession(active: Bool) throws {
+    try session.setCategory(.record, mode: .spokenAudio)
+    try session.setActive(true)
+  }
   
   @objc func handleInterruption(_ notification: NSNotification) {
     if let info = notification.userInfo {
       let type = AVAudioSession.InterruptionType(rawValue: info[AVAudioSessionInterruptionTypeKey] as! UInt)
       if type == .began {
-        // interrupt
+        pauseRecording()
       }
       else {
         let options = AVAudioSession.InterruptionOptions(rawValue: info[AVAudioSessionInterruptionOptionKey] as! UInt)
         if options == .shouldResume {
-          // resume
+          resumeRecording()
         }
       }
     }

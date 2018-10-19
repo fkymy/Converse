@@ -9,17 +9,30 @@
 /* Begin PBXBuildFile section */
 		C7A032DEBF8472909B28889B /* Pods_ConverseCloneDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */; };
 		D918EBA721788404005FA98F /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBA621788404005FA98F /* AudioRecorder.swift */; };
+		D918EBAA217975C2005FA98F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBA9217975C2005FA98F /* Colors.swift */; };
+		D918EBAC217975D4005FA98F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBAB217975D4005FA98F /* Label.swift */; };
+		D918EBB021797723005FA98F /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBAF21797723005FA98F /* Control.swift */; };
+		D918EBB221797799005FA98F /* PrimaryControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBB121797799005FA98F /* PrimaryControl.swift */; };
+		D918EBB52179880B005FA98F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBB42179880B005FA98F /* Container.swift */; };
+		D918EBB721799F1F005FA98F /* MeterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918EBB621799F1F005FA98F /* MeterTable.swift */; };
 		D9D7F109216DE24F00518019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F108216DE24F00518019 /* AppDelegate.swift */; };
 		D9D7F10B216DE24F00518019 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D7F10A216DE24F00518019 /* ViewController.swift */; };
 		D9D7F10E216DE24F00518019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F10C216DE24F00518019 /* Main.storyboard */; };
 		D9D7F110216DE25100518019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F10F216DE25100518019 /* Assets.xcassets */; };
 		D9D7F113216DE25100518019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F111216DE25100518019 /* LaunchScreen.storyboard */; };
 		D9D7F11E21731D3700518019 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9D7F11D21731D3700518019 /* GoogleService-Info.plist */; };
+		D9DE76042179BE1100C6340C /* PulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE76032179BE1100C6340C /* PulseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59F6A854C7157D130CF3766A /* Pods_ConverseCloneDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConverseCloneDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D918EBA621788404005FA98F /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		D918EBA9217975C2005FA98F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D918EBAB217975D4005FA98F /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		D918EBAF21797723005FA98F /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		D918EBB121797799005FA98F /* PrimaryControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryControl.swift; sourceTree = "<group>"; };
+		D918EBB42179880B005FA98F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		D918EBB621799F1F005FA98F /* MeterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterTable.swift; sourceTree = "<group>"; };
 		D9D7F105216DE24F00518019 /* ConverseCloneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverseCloneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D7F108216DE24F00518019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D7F10A216DE24F00518019 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +41,7 @@
 		D9D7F112216DE25100518019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D7F114216DE25100518019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9D7F11D21731D3700518019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9DE76032179BE1100C6340C /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseView.swift; sourceTree = "<group>"; };
 		E9B20B57F5B98F877BFD8B14 /* Pods-ConverseCloneDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F2303EAA37611EF7A563FC64 /* Pods-ConverseCloneDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +75,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D918EBA821797569005FA98F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D918EBAE217975ED005FA98F /* Style */,
+				D918EBAD217975E2005FA98F /* Base */,
+				D918EBB3217977A3005FA98F /* Custom */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D918EBAD217975E2005FA98F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D918EBAB217975D4005FA98F /* Label.swift */,
+				D918EBB42179880B005FA98F /* Container.swift */,
+				D918EBAF21797723005FA98F /* Control.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D918EBAE217975ED005FA98F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D918EBA9217975C2005FA98F /* Colors.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		D918EBB3217977A3005FA98F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D918EBB121797799005FA98F /* PrimaryControl.swift */,
+				D9DE76032179BE1100C6340C /* PulseView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		D9D7F0FC216DE24F00518019 = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				D9D7F108216DE24F00518019 /* AppDelegate.swift */,
+				D9D7F10C216DE24F00518019 /* Main.storyboard */,
 				D9D7F10A216DE24F00518019 /* ViewController.swift */,
 				D918EBA621788404005FA98F /* AudioRecorder.swift */,
-				D9D7F10C216DE24F00518019 /* Main.storyboard */,
+				D918EBB621799F1F005FA98F /* MeterTable.swift */,
+				D918EBA821797569005FA98F /* Views */,
 				D9D7F10F216DE25100518019 /* Assets.xcassets */,
 				D9D7F111216DE25100518019 /* LaunchScreen.storyboard */,
 				D9D7F114216DE25100518019 /* Info.plist */,
@@ -105,7 +158,6 @@
 				D9D7F101216DE24F00518019 /* Sources */,
 				D9D7F102216DE24F00518019 /* Frameworks */,
 				D9D7F103216DE24F00518019 /* Resources */,
-				E5E5A96534261A969C741E31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,28 +234,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5E5A96534261A969C741E31 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -212,8 +242,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D7F10B216DE24F00518019 /* ViewController.swift in Sources */,
+				D918EBB221797799005FA98F /* PrimaryControl.swift in Sources */,
+				D918EBB721799F1F005FA98F /* MeterTable.swift in Sources */,
+				D918EBAA217975C2005FA98F /* Colors.swift in Sources */,
+				D9DE76042179BE1100C6340C /* PulseView.swift in Sources */,
 				D9D7F109216DE24F00518019 /* AppDelegate.swift in Sources */,
+				D918EBAC217975D4005FA98F /* Label.swift in Sources */,
+				D918EBB52179880B005FA98F /* Container.swift in Sources */,
 				D918EBA721788404005FA98F /* AudioRecorder.swift in Sources */,
+				D918EBB021797723005FA98F /* Control.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
