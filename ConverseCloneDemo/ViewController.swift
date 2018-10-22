@@ -17,6 +17,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var average: UIProgressView!
   @IBOutlet weak var peak: UIProgressView!
   
+  @IBOutlet weak var pulseView: PulseView!
+  
   private var audioRecorder: AudioRecorder!
   
   private var meterTable = MeterTable(tableSize: 100)
@@ -66,15 +68,43 @@ extension ViewController: AudioRecorderDelegate {
     print("peakPower", peakPower)
     print(linearPeak)
     
-    label.text = "dB=\(averagePower) lindB=\(linearAverage)"
+    label.text = "dB=\(averagePower)\n lindB=\(linearAverage)"
     average.setProgress(linearAverage, animated: true)
     peak.setProgress(linearPeak, animated: true)
+    
+    let scale = CGFloat(1 + linearAverage * 10)
+    
+//    UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
+//      self.pulseView.outerPulse.transform = CATransform3DMakeScale(scale, scale, 1)
+//    })
+    
+    // let timing = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+    let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+    scaleAnimation.delegate = self
+    CATransaction.begin()
+    // CATransaction.setAnimationTimingFunction(timing)
+    scaleAnimation.duration = 0.1
+    scaleAnimation.fromValue = 1.0
+    scaleAnimation.toValue = scale
+    pulseView.outerPulse.add(scaleAnimation, forKey: "scale")
+    CATransaction.commit()
   }
   
   func audioRecorder(_ audioRecorder: AudioRecorder, didFinishRecording url: URL) {
     average.setProgress(0, animated: true)
     peak.setProgress(0, animated: true)
     label.text = "タップ&長押しで話す"
+    
+    UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
+      self.pulseView.outerPulse.transform = CATransform3DIdentity
+    })
+  }
+}
+
+extension ViewController: CAAnimationDelegate {
+  
+  func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    
   }
 }
 

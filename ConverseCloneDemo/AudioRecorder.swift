@@ -126,6 +126,7 @@ extension AudioRecorder {
   func startMetering() {
     displaylink = CADisplayLink(target: self, selector: #selector(step))
     displaylink?.add(to: .current, forMode: RunLoop.Mode.common)
+    displaylink?.preferredFramesPerSecond = 10
   }
   
   func stopMetering() {

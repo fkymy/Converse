@@ -69,35 +69,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-Ga-SGt" customClass="Container" customModule="ConverseCloneDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-7l-26n">
-                                        <rect key="frame" x="97.5" y="316" width="180" height="35"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-7l-26n">
+                                        <rect key="frame" x="132.5" y="295.5" width="110" height="28"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-LC-i7z">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="2"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="2"/>
                                                 <color key="tintColor" red="1" green="0.25007479399999999" blue="0.084036610580000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-Zw-8jE">
-                                                <rect key="frame" x="0.0" y="33" width="180" height="2"/>
+                                                <rect key="frame" x="0.0" y="26" width="110" height="2"/>
                                                 <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </progressView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="v9V-RR-FWw"/>
+                                            <constraint firstAttribute="width" constant="110" id="mec-vi-DFp"/>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップ&amp;長押しで話す" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-6m-7QY" customClass="Label" customModule="ConverseCloneDemo" customModuleProvider="target">
-                                        <rect key="frame" x="81" y="180" width="213" height="22"/>
+                                        <rect key="frame" x="81" y="142" width="213" height="22"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Js-cQt" customClass="PulseView" customModule="ConverseCloneDemo" customModuleProvider="target">
+                                        <rect key="frame" x="132.5" y="415" width="110" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="rQJ-6m-7QY" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="0wT-oP-6vR"/>
                                     <constraint firstItem="rGG-7l-26n" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="2s2-eN-p3X"/>
-                                    <constraint firstItem="rQJ-6m-7QY" firstAttribute="top" secondItem="gKq-Ga-SGt" secondAttribute="top" constant="180" id="3BR-fn-wse"/>
-                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerY" secondItem="gKq-Ga-SGt" secondAttribute="centerY" id="pHE-vV-OW9"/>
+                                    <constraint firstItem="rQJ-6m-7QY" firstAttribute="top" secondItem="gKq-Ga-SGt" secondAttribute="top" constant="142" id="3BR-fn-wse"/>
+                                    <constraint firstAttribute="bottom" secondItem="vR4-Js-cQt" secondAttribute="bottom" constant="142" id="YOp-b1-A9y"/>
+                                    <constraint firstItem="vR4-Js-cQt" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="p20-HA-pep"/>
+                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerY" secondItem="gKq-Ga-SGt" secondAttribute="centerY" constant="-24" id="pHE-vV-OW9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1m-fB-oTh" customClass="PrimaryControl" customModule="ConverseCloneDemo" customModuleProvider="target">
@@ -140,6 +146,7 @@
                         <outlet property="container" destination="gKq-Ga-SGt" id="Naq-w6-9lh"/>
                         <outlet property="label" destination="rQJ-6m-7QY" id="52d-tz-4ep"/>
                         <outlet property="peak" destination="pfa-Zw-8jE" id="JXz-XR-z9w"/>
+                        <outlet property="pulseView" destination="vR4-Js-cQt" id="Kxq-db-oGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0q-aV-giI" userLabel="First Responder" sceneMemberID="firstResponder"/>
