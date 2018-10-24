@@ -104,6 +104,7 @@ class Core: UIView {
   
   private func commonInit() {
     backgroundColor = UIColor.red
+    alpha = 0.3
     layer.cornerRadius = 110 / 2
   }
 }
@@ -144,12 +145,12 @@ class Pulse: UIView {
   
   private func commonInit() {
     layer.backgroundColor = UIColor.red.cgColor
-    layer.opacity = 0.3
+    layer.opacity = 0.2
     layer.cornerRadius = 156 / 2
     layer.insertSublayer(pulseLayer, below: layer)
     pulseLayer.strokeColor = nil
     pulseLayer.fillColor = UIColor.red.cgColor
-    pulseLayer.opacity = 0.3
+    pulseLayer.opacity = 0.2
   }
   
   override func layoutSubviews() {

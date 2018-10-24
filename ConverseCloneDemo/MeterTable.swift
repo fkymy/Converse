@@ -15,7 +15,7 @@ import Foundation
 // decibels = log10 (linear) * 20;
 final class MeterTable {
   
-  let minDb: Float = -60.0 // measured in a silent room
+  let minDb: Float = -40.0 // measured in a silent room
   
   var tableSize: Int // 300
   

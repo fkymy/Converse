@@ -41,7 +41,7 @@
 		D9D7F112216DE25100518019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D7F114216DE25100518019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9D7F11D21731D3700518019 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D9DE76032179BE1100C6340C /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseView.swift; sourceTree = "<group>"; };
+		D9DE76032179BE1100C6340C /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulseView.swift; path = Custom/PulseView.swift; sourceTree = "<group>"; };
 		E9B20B57F5B98F877BFD8B14 /* Pods-ConverseCloneDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F2303EAA37611EF7A563FC64 /* Pods-ConverseCloneDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConverseCloneDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConverseCloneDemo/Pods-ConverseCloneDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,38 +78,14 @@
 		D918EBA821797569005FA98F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D918EBAE217975ED005FA98F /* Style */,
-				D918EBAD217975E2005FA98F /* Base */,
-				D918EBB3217977A3005FA98F /* Custom */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D918EBAD217975E2005FA98F /* Base */ = {
-			isa = PBXGroup;
-			children = (
 				D918EBAB217975D4005FA98F /* Label.swift */,
 				D918EBB42179880B005FA98F /* Container.swift */,
 				D918EBAF21797723005FA98F /* Control.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		D918EBAE217975ED005FA98F /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				D918EBA9217975C2005FA98F /* Colors.swift */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		D918EBB3217977A3005FA98F /* Custom */ = {
-			isa = PBXGroup;
-			children = (
 				D918EBB121797799005FA98F /* PrimaryControl.swift */,
 				D9DE76032179BE1100C6340C /* PulseView.swift */,
+				D918EBA9217975C2005FA98F /* Colors.swift */,
 			);
-			path = Custom;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D9D7F0FC216DE24F00518019 = {
