@@ -55,7 +55,6 @@ extension ViewController: AudioRecorderDelegate {
     }
     
     let linearAverage = meterTable.valueForPower(power: averagePower)
-    let linearPeak = meterTable.valueForPower(power: peakPower)
     let scale = CGFloat(1 + (linearAverage * 5))
     
     label.text = "dB=\(averagePower)\n \(linearAverage)"
@@ -66,6 +65,8 @@ extension ViewController: AudioRecorderDelegate {
   }
   
   func audioRecorder(_ audioRecorder: AudioRecorder, didFinishRecording url: URL) {
+    let impact = UIImpactFeedbackGenerator(style: .light)
+    impact.impactOccurred()
     label.text = "タップ&長押しで話す"
   }
 }
@@ -106,17 +107,20 @@ extension ViewController: PrimaryControlDelegate {
 extension ViewController: CAAnimationDelegate {
   
   func beginCompression() {
-    container.layer.cornerRadius = 32
-    UIView.animate(withDuration: 0.225, delay: 0, options: .curveEaseOut, animations: {
+    UIView.animate(withDuration: 0.15, delay: 0.15, options: .curveEaseIn, animations: {
+      self.container.layer.cornerRadius = 32
       self.container.transform = CGAffineTransform(scaleX: 0.925, y: 0.925)
     })
   }
   
   func endCompression() {
+    container.layer.removeAllAnimations() // this fixes a jump
+    container.transform = CGAffineTransform.identity
     container.layer.cornerRadius = 0
-    UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
-      self.container.transform = CGAffineTransform.identity
-    })
+//    UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
+//      self.container.transform = CGAffineTransform.identity
+//      self.container.layer.cornerRadius = 0
+//    })
   }
   
   func beginPulsation() {
@@ -154,6 +158,7 @@ extension ViewController: CAAnimationDelegate {
   func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
     if flag == true {
       print("flag is true")
+      
       AudioServicesPlaySystemSound(1519)
       audioRecorder.startRecording()
     }
@@ -191,9 +196,4 @@ extension ViewController: CAAnimationDelegate {
 
 // MARK: - Utilities
 extension ViewController {
-  
-  //  func launchHaptic() {
-  //    let impact = UIImpactFeedbackGenerator(style: .heavy)
-  //    impact.impactOccurred()
-  //  }
 }
