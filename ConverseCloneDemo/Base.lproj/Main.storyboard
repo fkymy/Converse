@@ -69,63 +69,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-Ga-SGt" customClass="Container" customModule="ConverseCloneDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-7l-26n">
-                                        <rect key="frame" x="132.5" y="295.5" width="110" height="28"/>
-                                        <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-LC-i7z">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="2"/>
-                                                <color key="tintColor" red="1" green="0.25007479399999999" blue="0.084036610580000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-Zw-8jE">
-                                                <rect key="frame" x="0.0" y="26" width="110" height="2"/>
-                                                <color key="tintColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </progressView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="mec-vi-DFp"/>
-                                        </constraints>
-                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップ&amp;長押しで話す" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-6m-7QY" customClass="Label" customModule="ConverseCloneDemo" customModuleProvider="target">
-                                        <rect key="frame" x="81" y="142" width="213" height="22"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                        <rect key="frame" x="47.5" y="142" width="280" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="Nfx-mN-xqe"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ZAP-FU-lbN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Js-cQt" customClass="PulseView" customModule="ConverseCloneDemo" customModuleProvider="target">
-                                        <rect key="frame" x="132.5" y="415" width="110" height="110"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="rQJ-6m-7QY" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="0wT-oP-6vR"/>
-                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="2s2-eN-p3X"/>
                                     <constraint firstItem="rQJ-6m-7QY" firstAttribute="top" secondItem="gKq-Ga-SGt" secondAttribute="top" constant="142" id="3BR-fn-wse"/>
-                                    <constraint firstAttribute="bottom" secondItem="vR4-Js-cQt" secondAttribute="bottom" constant="142" id="YOp-b1-A9y"/>
-                                    <constraint firstItem="vR4-Js-cQt" firstAttribute="centerX" secondItem="gKq-Ga-SGt" secondAttribute="centerX" id="p20-HA-pep"/>
-                                    <constraint firstItem="rGG-7l-26n" firstAttribute="centerY" secondItem="gKq-Ga-SGt" secondAttribute="centerY" constant="-24" id="pHE-vV-OW9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1m-fB-oTh" customClass="PrimaryControl" customModule="ConverseCloneDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5he-4Z-wde">
-                                        <rect key="frame" x="172.5" y="48" width="30" height="30"/>
-                                        <state key="normal" title="Play"/>
-                                        <connections>
-                                            <action selector="onPlay:" destination="c7c-dT-Cdj" eventType="touchUpInside" id="O0g-cz-Ect"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="5he-4Z-wde" firstAttribute="centerX" secondItem="i1m-fB-oTh" secondAttribute="centerX" id="LlV-ho-BQz"/>
-                                    <constraint firstItem="5he-4Z-wde" firstAttribute="top" secondItem="i1m-fB-oTh" secondAttribute="top" constant="48" id="qR4-rT-xix"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="onTouchDown:" destination="c7c-dT-Cdj" eventType="touchDown" id="fj7-rj-Mbd"/>
-                                    <action selector="onTouchUpInside:" destination="c7c-dT-Cdj" eventType="touchUpInside" id="39j-ez-c9f"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,11 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="VUr-th-66d"/>
                     </view>
                     <connections>
-                        <outlet property="average" destination="FkT-LC-i7z" id="VNI-Bj-gan"/>
                         <outlet property="container" destination="gKq-Ga-SGt" id="Naq-w6-9lh"/>
                         <outlet property="label" destination="rQJ-6m-7QY" id="52d-tz-4ep"/>
-                        <outlet property="peak" destination="pfa-Zw-8jE" id="JXz-XR-z9w"/>
-                        <outlet property="pulseView" destination="vR4-Js-cQt" id="Kxq-db-oGh"/>
+                        <outlet property="primaryControl" destination="i1m-fB-oTh" id="sLh-SK-aLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0q-aV-giI" userLabel="First Responder" sceneMemberID="firstResponder"/>

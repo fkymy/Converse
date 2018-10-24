@@ -123,13 +123,13 @@ extension AudioRecorder {
 // MARK: - Metering
 extension AudioRecorder {
   
-  func startMetering() {
+  private func startMetering() {
     displaylink = CADisplayLink(target: self, selector: #selector(step))
     displaylink?.add(to: .current, forMode: RunLoop.Mode.common)
     displaylink?.preferredFramesPerSecond = 10
   }
   
-  func stopMetering() {
+  private func stopMetering() {
     displaylink?.invalidate()
     displaylink = nil
   }

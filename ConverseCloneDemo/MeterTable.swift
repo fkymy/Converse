@@ -8,16 +8,19 @@
 
 import Foundation
 
-// linear = pow (10, decibels / 20);
-// decibels = log10 (linear) * 20;
-
 // see: https://github.com/shaojiankui/SpeakHere/blob/master/Classes/MeterTable.cpp
 // meter table at index 0 returns greatest amplitude
-class MeterTable {
+// Memo:
+// linear = pow (10, decibels / 20);
+// decibels = log10 (linear) * 20;
+final class MeterTable {
+  
   let minDb: Float = -60.0 // measured in a silent room
+  
   var tableSize: Int // 300
   
   let scaleFactor: Float
+  
   var meterTable = [Float]()
   
   init (tableSize: Int) {
